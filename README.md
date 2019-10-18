@@ -1,2 +1,2 @@
 # repook
-An application to manage your report booklet to ease your apprenticeship
+An application to generate your report booklet to ease your apprenticeship
