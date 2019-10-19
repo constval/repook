@@ -1,7 +1,7 @@
 {
-  "name": "frontend",
+  "name": "repook-frontend",
   "version": "1.0.0",
-  "description": "My awesome Nuxt.js project",
+  "description": "Nuxt.js frontend for repook application",
   "author": "",
   "private": true,
   "scripts": {
