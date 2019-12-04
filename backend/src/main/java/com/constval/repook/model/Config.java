@@ -1,18 +1,13 @@
 package com.constval.repook.model;
 
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
+import javax.persistence.*;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Component
-@Scope("prototype")
+@Entity
+@Table(name = "configuration")
 public class Config {
 
     @Id
-    @GeneratedValue( strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     private String testValue;
