@@ -1,18 +1,14 @@
 package com.constval.repook.service;
 
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.constval.repook.repository.BookletRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-@CrossOrigin(origins = "http://localhost:8081")
-@RestController
-@RequestMapping("/api")
+@Component
 public class ReportBookletCreationService {
 
-    @RequestMapping( path = "/")
-    public Object greeting(){
-        return "test";
-    }
+    @Autowired
+    BookletRepository bookletRepository;
 
 }

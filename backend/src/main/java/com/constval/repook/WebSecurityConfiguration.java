@@ -13,7 +13,8 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         @Bean
         public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
-            http.authorizeExchange().anyExchange().permitAll();
+//            http.authorizeExchange().anyExchange().permitAll(); //does not work
+//            http.csrf().disable(); //does not work
             return http.build();
         }
     }

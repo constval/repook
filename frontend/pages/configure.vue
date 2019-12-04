@@ -12,11 +12,11 @@
 import axios from "axios"
 
 const AXIOS = axios.create({
-  baseURL: "http://localhost:1337/api",
+  baseURL: "http://localhost:1337/api/config/",
 })
 
 const config = {
-  headers: { "Access-Control-Allow-Origin": "*", "Content-Type": "text/plain" },
+  headers: { "Access-Control-Allow-Origin": "*", "Content-Type": "application/json" },
 }
 
 export default {
@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     getRandomSource() {
-      return AXIOS.get("/", config).then((it) => {
+      return AXIOS.get("/all", config).then((it) => {
         this.src = it.data
       })
     },
