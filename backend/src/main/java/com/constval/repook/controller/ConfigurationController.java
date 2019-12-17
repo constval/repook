@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-@CrossOrigin("http://localhost:8081") //does not work without on my local machine
+@CrossOrigin("http://localhost:3000") //does not work without on my local machine
 @RestController
 @RequestMapping("/api/config")
 public class ConfigurationController {
