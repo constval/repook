@@ -1,0 +1,36 @@
+version: '3.3'
+
+services:
+    db:
+        image: mysql
+        restart: always
+        environment: 
+            MYSQL_DATABASE: 'db'
+            MYSQL_PASSWORD: 'system'
+            MYSQL_ROOT_PASSWORD: 'root'
+        ports:
+            - '3306:3306'
+        volumes:
+           - ./docker/volumes/db:/var/lib/mysql
+
+    frontend:
+        build:
+            context: ./frontend/
+            dockerfile: Dockerfile
+        restart: always
+        ports:
+            - '8080:3000'
+        volumes:
+            - ./docker/volumes/frontend:/app
+
+    backend:
+        build:
+            context: ./backend
+            dockerfile: Dockerfile
+        restart: always
+        ports: 
+            - '1337:1337'
+    
+volumes:
+    frontend:
+    db:
